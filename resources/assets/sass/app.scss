@@ -2,13 +2,20 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-// Variables
-@import "variables";
+/* Import Font Awesome Icons Set */
+@import '~flag-icon-css/css/flag-icon.min.css';
+/* Import Font Awesome Icons Set */
+$fa-font-path: '~font-awesome/fonts/';
+@import '~font-awesome/css/font-awesome.min.css';
+/* Import Simple Line Icons Set */
+$simple-line-font-path: '~simple-line-icons/fonts/';
+@import '~simple-line-icons/css/simple-line-icons.css';
+/* Import Bootstrap Vue Styles */
+@import '~bootstrap-vue/dist/bootstrap-vue.css';
 
-// Bootstrap
-@import '~bootstrap/scss/bootstrap';
+$navbar-brand-logo: url('../images/logo.png');
 
-.navbar-laravel {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-}
+$navbar-brand-minimized-logo: none;
+
+// Import Main styles for this application
+@import '../scss/style';

@@ -12,4 +12,17 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+   .sass('resources/assets/sass/app.scss', 'public/css').options({ resourceRoot: '../' });
+
+mix.autoload({
+    jquery: ['$', 'window.jQuery', 'jQuery']
+});
+
+if (process.env.NODE_ENV != 'testing') {
+    mix.extract(['jquery', 'bootstrap', 'lodash', 'vue']);
+    mix.version();
+}
+
+if (process.env.NODE_ENV == 'development') {
+    mix.sourceMaps();
+}

@@ -9,12 +9,23 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 
-import Vue from 'vue'
-import BootstrapVue from 'bootstrap-vue'
-import App from './App.vue'
-import router from './router'
+import Vue from 'vue';
+import BootstrapVue from 'bootstrap-vue';
+import App from './App.vue';
+import router from './router';
+import DataTable from './components/DataTable.vue';
 
 Vue.use(BootstrapVue)
+
+Vue.component('data-table', DataTable);
+
+Vue.mixin({
+    computed: {
+        baseUrl() {
+            return document.getElementsByTagName('base')[0].href;
+        }
+    }
+});
 
 /* eslint-disable no-new */
 new Vue({

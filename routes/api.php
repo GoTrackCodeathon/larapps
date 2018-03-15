@@ -16,3 +16,9 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::apiResource('/kasus', 'KasusController');
+Route::apiResource('/acc', 'BankAccountController');
+Route::apiResource('/fiureport', 'FiuReportController');
+Route::apiResource('/unscr/individu', 'UnscrIndividualController');
+Route::get('/unscr/refresh/individu', 'UnscrIndividualController@refresh');

@@ -9,6 +9,9 @@
                 <template slot="index" slot-scope="data" class="text-center">
                     {{ data.index+((currentPage-1)*perPage) + 1 }}
                 </template>
+                <template slot="action" slot-scope="data" class="text-center">
+                    <b-button>Add to case</b-button>
+                </template>
             </b-table>
             <b-pagination :total-rows="totalRows" :per-page="perPage" v-model="currentPage" />
         </b-card>

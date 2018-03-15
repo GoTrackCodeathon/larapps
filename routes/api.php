@@ -19,6 +19,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::apiResource('/kasus', 'KasusController');
 Route::apiResource('/acc', 'BankAccountController');
+Route::apiResource('/crimes', 'CrimeController');
 Route::apiResource('/fiureport', 'FiuReportController');
 Route::apiResource('/unscr/individu', 'UnscrIndividualController');
 Route::get('/unscr/refresh/individu', 'UnscrIndividualController@refresh');
+
+Route::get('/search/{query}', 'SearchController@cari');

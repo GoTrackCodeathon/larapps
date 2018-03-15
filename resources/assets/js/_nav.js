@@ -35,6 +35,11 @@ export default {
             name: 'Fiu Report',
             url: '/fiureport',
             icon: 'icon-grid'
+        },
+        {
+            name: 'Crimes',
+            url: '/crimes',
+            icon: 'icon-grid'
         }
     ]
 }

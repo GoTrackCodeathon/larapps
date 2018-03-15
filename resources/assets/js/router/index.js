@@ -7,7 +7,8 @@ import Full from '../containers/Full'
 import Search from '../views/Search.vue'
 import Cases from '../views/kasus/KasusIndex.vue'
 import UnscrIndividu from '../views/unscr/IndividualIndex.vue'
-import FiuReport from '../views/Fiurep.vue'
+import FiuReport from '../views/Fiurep.vue';
+import Crimes from '../views/Crimes.vue';
 
 Vue.use(Router)
 
@@ -56,6 +57,11 @@ export default new Router({
                     path: 'fiureport',
                     name: 'FiuReport',
                     component: FiuReport
+                },
+                {
+                    path: 'crimes',
+                    name: 'Crimes',
+                    component: Crimes
                 }
             ]
         }

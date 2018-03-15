@@ -12,15 +12,15 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('vis/vis-network.min.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ secure_asset('vis/vis-network.min.css') }}" rel="stylesheet">
 </head>
     <body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
         <div id="app"></div>
         <!-- built files will be auto injected -->
     </body>
     {{-- WebPack --}}
-    <script src="{{ asset(mix('/js/manifest.js')) }}"></script>
-    <script src="{{ asset(mix('/js/vendor.js')) }}"></script>
-    <script src="{{ asset(mix('/js/app.js')) }}"></script>
+    <script src="{{ secure_asset(mix('/js/manifest.js')) }}"></script>
+    <script src="{{ secure_asset(mix('/js/vendor.js')) }}"></script>
+    <script src="{{ secure_asset(mix('/js/app.js')) }}"></script>
 </html>
